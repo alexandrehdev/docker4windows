@@ -1,9 +1,36 @@
 # docker4win
 # ENG
-### hold on...
+### Step by Step
 
+### Unfortunately this configuration could be only done on Windows 10, because older versions do not offer support.
 
+- First thing first, we need to enable a WSL extension for windows. And we can do that running the command line bellow:
 
+``` dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart ```
+
+- Alright, now we need to enable another resource to install a WSL 2
+
+``` dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart ```
+
+- Now, it will be needed reboot your system
+
+- After reboot your system, we need to update the linux kernel, just click the link bellow and the download will start
+
+```https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi```
+
+- Now we will set a default WSL version for docker
+
+``` wsl --set-default-version 2 ```
+
+- Install a linux distro on windows store, I recommend *Ubuntu 18.04 LTS*
+
+- After you install, if you search for Ubuntu on cortana, you will find a Ubuntu terminal.
+
+- Open it
+
+- Set the initial config, username, password
+
+- And that's it
 
 # PT-BR
 
